@@ -1,0 +1,12 @@
+{
+  "name": "auth-app",
+  "private": true,
+  "devDependencies": {
+    "turbo": "^2.2.3"
+  },
+  "workspaces": [
+    "apps/*",
+    "common/schema*"
+  ],
+  "packageManager": "yarn@1.22.22"
+}
