@@ -51,8 +51,9 @@ This application implements several security best practices:
 
 ## Project Structure
 
-auth-app/
-├── apps/
+.
+├── auth-app/
+│ └── apps/
 │ ├── api/ # NestJS backend
 │ └── app/ # Next.js frontend
 └── common/
@@ -83,3 +84,7 @@ auth-app/
    ```
    yarn turbo dev
    ```
+
+## Documentation
+
+The API documentation can be found at http://\[your_url]/docs provided by Swagger
