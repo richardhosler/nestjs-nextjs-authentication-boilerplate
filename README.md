@@ -49,16 +49,6 @@ This application implements several security best practices:
 - Zod for form validation
 - React hook form for form handling
 
-## Project Structure
-
-.
-├── auth-app/
-│ └── apps/
-│ ├── api/ # NestJS backend
-│ └── app/ # Next.js frontend
-└── common/
-└── schema/ # Shared schemas
-
 ## Prerequisites
 
 - [Node.js](https://nodejs.org)
