@@ -10,7 +10,7 @@ import { UserRole } from "src/roles/user-role.enum";
 export class UsersService {
   constructor(
     @InjectRepository(User)
-    private usersRepository: Repository<User>
+    private usersRepository: Repository<User>,
   ) {}
 
   async findOne(email: string): Promise<User | undefined> {
@@ -25,7 +25,7 @@ export class UsersService {
   }: RegisterDTO): Promise<User> {
     if (await this.findOne(email)) {
       throw new Error(
-        "We can't register you at the moment, please try again in a moment"
+        "We can't register you at the moment, please try again in a moment",
       );
     }
     const user = new User();

@@ -14,7 +14,7 @@ import { User } from "src/users/user.entity";
 export class AuthService {
   constructor(
     private usersService: UsersService,
-    private jwtService: JwtService
+    private jwtService: JwtService,
   ) {}
 
   async validateUser(email: string, pass: string): Promise<User> {
@@ -28,7 +28,7 @@ export class AuthService {
 
   async login(
     email: string,
-    password: string
+    password: string,
   ): Promise<{ access_token: string; user: User }> {
     const message =
       "We can't log you in at the moment, please try again in a moment";

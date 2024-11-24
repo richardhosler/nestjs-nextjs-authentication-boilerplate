@@ -20,7 +20,7 @@ import { UsersService } from "./users/users.service";
 export class AppController {
   constructor(
     private authService: AuthService,
-    private userService: UsersService
+    private userService: UsersService,
   ) {}
 
   @Post("auth/login")
@@ -29,20 +29,20 @@ export class AppController {
   }
 
   @Post("auth/logout")
-  async logout(@Request() request) {
+  async logout(@Request() _request) {
     return new Response("WIP"); //TODO: blacklist old token
   }
 
   @UseGuards(JwtAuthGuard)
   @Get("profile")
   async getProfile(@Request() request) {
-    return this.userService.findOne(request.email);
+    return this.userService.findOne(request.user.email);
   }
 
   @Post("register")
   async register(
     @Body()
-    registerDto: RegisterDTO
+    registerDto: RegisterDTO,
   ) {
     return this.authService.register(registerDto);
   }
